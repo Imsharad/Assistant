@@ -1,0 +1,117 @@
+# Salesforce Tools Configuration
+
+soql:
+  max_query_length: 1000
+  default_limit: 100
+  allowed_objects:
+    - Account
+    - Contact
+    - Opportunity
+    - Lead
+    - Case
+
+generate_chart:
+  max_data_points: 1000
+  allowed_chart_types:
+    - bar
+    - line
+    - pie
+    - scatter
+  default_chart_type: bar
+  max_title_length: 100
+
+data_loader:
+  max_batch_size: 1000
+  allowed_operations:
+    - insert
+    - update
+    - upsert
+    - delete
+  max_file_size_mb: 10
+
+metadata:
+  allowed_metadata_types:
+    - CustomObject
+    - CustomField
+    - ValidationRule
+    - ApexClass
+    - ApexTrigger
+  max_deploy_items: 50
+
+general:
+  timeout_seconds: 300
+  max_retries: 3
+  log_level: INFO
+
+# Llama 3.1 Model Configuration
+llama_3_1:
+  model_name: "llama-3.1-405b-instruct"
+  temperature: 0.7
+  max_tokens: 1024
+  top_p: 1
+
+# Custom Tool Definitions
+custom_tools:
+  - name: get_all_sf_tables
+    description: "Fetches all the available Salesforce table names."
+    parameters: {}
+
+  - name: get_all_cols_of_sf_table
+    description: "Fetches all the columns available for the given Salesforce table name."
+    parameters:
+      table_name:
+        type: string
+        description: "The name of the Salesforce table"
+        required: true
+
+  - name: execute_soql_query
+    description: "Executes a Salesforce SOQL query."
+    parameters:
+      soql_query:
+        type: string
+        description: "SOQL query to execute"
+        required: true
+
+  - name: generate_chartjs_config_and_chart
+    description: "Generates Chart.js configuration and chart, and returns the configuration in JSON format."
+    parameters:
+      config:
+        type: string
+        description: "Chart.js configuration"
+        required: true
+      title:
+        type: string
+        description: "Title of the chart"
+        required: true
+
+  - name: initiate_data_loading
+    description: "Initiates the data loading process for Salesforce."
+    parameters:
+      operation:
+        type: string
+        description: "The operation to perform (insert, update, delete, or upsert)"
+        required: true
+      object_name:
+        type: string
+        description: "The name of the Salesforce object"
+        required: true
+      file_url:
+        type: string
+        description: "The URL of the file to load"
+        required: true
+
+  - name: deploy_validation_rule
+    description: "Deploy a validation rule to Salesforce."
+    parameters:
+      validation_rule:
+        type: object
+        description: "Validation rule object"
+        required: true
+
+  - name: execute_apex_code
+    description: "Executes a Salesforce Apex code."
+    parameters:
+      apex_code:
+        type: string
+        description: "Apex code to execute"
+        required: true

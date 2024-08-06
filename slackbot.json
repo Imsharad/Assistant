@@ -1,0 +1,48 @@
+{
+    "display_information": {
+      "name": "Salesforce Data Loader Bot",
+      "description": "A bot to load data into Salesforce from Slack",
+      "background_color": "#4A154B"
+    },
+    "features": {
+      "bot_user": {
+        "display_name": "DataLoaderBot",
+        "always_online": true
+      }
+    },
+    "oauth_config": {
+      "scopes": {
+        "bot": [
+          "channels:history",
+          "channels:read",
+          "chat:write",
+          "users:read",
+          "commands",
+          "files:write",
+          "channels:join",
+          "reactions:read",
+          "reactions:write",
+          "im:history",
+          "im:write",
+          "mpim:history",
+          "mpim:write"
+        ],
+        "user": [
+          "channels:manage",
+          "groups:read",
+          "groups:history",
+          "im:history",
+          "mpim:history",
+          "users:read.email",
+          "users:profile:read",
+          "files:read",
+          "files:write:user"
+        ]
+      }
+    },
+    "settings": {
+      "org_deploy_enabled": false,
+      "socket_mode_enabled": true,
+      "token_rotation_enabled": false
+    }
+  }

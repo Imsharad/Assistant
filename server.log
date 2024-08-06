@@ -1,0 +1,16 @@
+2024-08-06 14:30:18,285 - timeit - INFO - None - None - None - Function: get_clientell_token, Time: 0.55 s
+2024-08-06 14:30:18,480 - timeit - INFO - None - None - None - Function: get_salesforce_token, Time: 0.19 s
+2024-08-06 14:30:18,480 - timeit - INFO - None - None - None - Function: get_salesforce_connection, Time: 0.75 s
+Failed to send a request to Slack API server: <urlopen error timed out>
+Failed to send a request to Slack API server: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+Failed to check the current session or reconnect to the server (session id: 38355a2c-4c27-40a3-8258-762d4617bddd, error: URLError, message: <urlopen error [Errno 8] nodename nor servname provided, or not known>)
+Failed to send a request to Slack API server: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+Failed to send a request to Slack API server: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+Failed to check the current session or reconnect to the server (session id: 38355a2c-4c27-40a3-8258-762d4617bddd, error: URLError, message: <urlopen error [Errno 8] nodename nor servname provided, or not known>)
+Failed to send a request to Slack API server: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+Failed to send a request to Slack API server: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+Failed to check the current session or reconnect to the server (session id: 38355a2c-4c27-40a3-8258-762d4617bddd, error: URLError, message: <urlopen error [Errno 8] nodename nor servname provided, or not known>)
+Failed to send a request to Slack API server: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+Failed to send a request to Slack API server: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+Failed to check the current session or reconnect to the server (session id: 38355a2c-4c27-40a3-8258-762d4617bddd, error: URLError, message: <urlopen error [Errno 8] nodename nor servname provided, or not known>)
+Failed to send a request to Slack API server: <urlopen error _ssl.c:983: The handshake operation timed out>
